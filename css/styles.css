@@ -1,0 +1,124 @@
+body{
+    margin:0px;
+    text-align:center;
+    font-family: "Merriweather", serif;
+    font-size:200%;
+}
+hr{
+
+            border-style: dotted none none;
+            border-color :grey;
+            border-width:5px;
+            width: 10%;
+            }
+h1{
+    color:#66BFBF;
+    font-size:5.625rem;
+    margin:0;
+    line-height:2;
+    font-family:"Sacramento", cursive;
+
+}
+h2{
+    color:#66BFBF;
+    font-family:"Montserrat", sans-serif;
+    font-weight:normal;
+}
+h3{
+    color:#11999E;
+    font-family:"Montserrat", sans-serif;
+}
+.top-container{
+    background-color:#DBFFCB;
+    position:relative;
+    padding-top:100px;
+
+}
+.middle-container{
+    background-color:#CAE8BD;
+}
+.bottom-container{
+    background-color:#799EFF;
+
+}
+.img-web{
+    height:200px;
+}
+.pro{
+    text-decoration:underline;
+}
+.bottom-cloud{
+    position:absolute;
+    left:300px;
+    bottom:300px;
+}
+.top-cloud{
+    position:absolute;
+    right:300px;
+    top:50px;
+
+}
+.a{
+      border-radius: 50%;
+      object-fit: cover;
+}
+.gip{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.link{
+    margin-left:500px;
+}
+.bottom-container{
+    margin:0px;
+    background-color:#66BFBF;
+}
+.btn{
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:"Merriweather", serif;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+a:hover{
+    color:#EAF6F6;
+}
+.copyright{
+    color:#EAF6F6;
+    font-size:0.75rem;
+}
+
+
+.profil {
+                border-radius: 50%;
+                transition: all 0.5s ease;
+                cursor: pointer;
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                width: 80px !important;
+                height: 80px !important;
+                z-index: 1000;
+                border: 3px solid white;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+                transform: scale(1);
+            }
+
+
+            .profil:hover {
+                transform: scale(1.1);
+            }
+
+
+.avatar{
+    border-radius: 50%;
+}

@@ -10,6 +10,7 @@
     "deploy": "npm run build && git add dist/ && git commit -m 'Deploy to GitHub Pages' && git push origin main"
   },
   "dependencies": {
+    "primeicons": "^7.0.0",
     "vue": "^3.4.0",
     "vue-router": "^4.2.0"
   },

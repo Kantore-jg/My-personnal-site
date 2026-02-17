@@ -105,11 +105,12 @@ export default {
   name: 'Projects',
   data() {
     return {
+      baseUrl: import.meta.env.BASE_URL,
       projects: [
         {
           title: 'E~Menage - Digital Household Management',
           description: 'A comprehensive system for modernizing household management and communication in Bujumbura city. Currently in active development with innovative features for urban digitalization.',
-          image: '/emenage-main.png',
+          image: import.meta.env.BASE_URL + 'emenage-main.png',
           liveUrl: 'https://prezi.com/p/hf0_vh_hyma7/digitalisation-de-la-gestion-des-menages-et-de-la-communication-a-bujumbura/',
           githubUrl: null,
           status: 'in-progress',
@@ -125,7 +126,7 @@ export default {
         {
           title: 'AI-Powered Data Analysis Tool',
           description: 'An intelligent system that analyzes large datasets and provides actionable insights using machine learning algorithms and data visualization techniques.',
-          image: 'https://via.placeholder.com/400x300/2563eb/ffffff?text=AI+Data+Analysis',
+          image: 'https://placehold.co/400x300/2563eb/ffffff?text=AI+Data+Analysis',
           liveUrl: null,
           githubUrl: 'https://github.com/Kantore-jg',
           status: 'completed',
@@ -141,7 +142,7 @@ export default {
         {
           title: 'FullStack Web Application Platform',
           description: 'A scalable web application platform built with modern technologies, featuring user authentication, database management, and responsive design.',
-          image: 'https://via.placeholder.com/400x300/2563eb/ffffff?text=Web+Platform',
+          image: 'https://placehold.co/400x300/2563eb/ffffff?text=Web+Platform',
           liveUrl: null,
           githubUrl: 'https://github.com/Kantore-jg',
           status: 'completed',
@@ -156,9 +157,9 @@ export default {
         }
       ],
       projectImages: [
-        '/emenage-2.png',
-        '/emenage-3.png',
-        '/emenage-4.png'
+        import.meta.env.BASE_URL + 'emenage-2.png',
+        import.meta.env.BASE_URL + 'emenage-3.png',
+        import.meta.env.BASE_URL + 'emenage-4.png'
       ]
     }
   },

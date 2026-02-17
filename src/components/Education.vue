@@ -15,7 +15,7 @@
         >
           <div class="education-icon">
             <div class="icon-wrapper">
-              <span class="icon-emoji">{{ edu.icon }}</span>
+              <i :class="'pi ' + edu.icon" style="font-size: 1.5rem; color: white;"></i>
             </div>
           </div>
           
@@ -33,7 +33,10 @@
             <div class="education-achievements" v-if="edu.achievements">
               <h5>Key Achievements</h5>
               <ul>
-                <li v-for="achievement in edu.achievements" :key="achievement">{{ achievement }}</li>
+                <li v-for="achievement in edu.achievements" :key="achievement">
+                  <i class="pi pi-trophy achievement-icon"></i>
+                  <span>{{ achievement }}</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -54,7 +57,7 @@ export default {
           degree: 'Bachelor in Software Engineering',
           period: '2023 - 2025',
           location: 'Bujumbura, Burundi',
-          icon: '🎓',
+          icon: 'pi-graduation-cap',
           achievements: [
             'Focus on modern software development practices',
             'Specialized in web technologies and AI',
@@ -66,7 +69,7 @@ export default {
           degree: 'High School Diploma in Information Technology',
           period: '2019 - 2022',
           location: 'Bujumbura, Burundi',
-          icon: '🏫',
+          icon: 'pi-building',
           achievements: [
             'Excellence in programming and computer science',
             'Led IT club activities',
@@ -114,11 +117,6 @@ export default {
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-md);
-}
-
-.icon-emoji {
-  font-size: 1.5rem;
-  filter: brightness(0) invert(1);
 }
 
 .education-content {
@@ -175,17 +173,18 @@ export default {
 }
 
 .education-achievements li {
-  position: relative;
-  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 0.5rem;
   color: var(--text-secondary);
   font-size: 0.875rem;
 }
 
-.education-achievements li::before {
-  content: '🏆';
-  position: absolute;
-  left: 0;
+.achievement-icon {
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
@@ -202,6 +201,10 @@ export default {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+  
+  .education-achievements li {
+    justify-content: center;
   }
 }
 </style>

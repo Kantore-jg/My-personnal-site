@@ -27,6 +27,9 @@
                 <div class="contact-details">
                   <h4>Email</h4>
                   <a href="mailto:codewithkantox@gmail.com">codewithkantox@gmail.com</a>
+
+                  <h4>WhatsApp</h4>
+                  <a href="https://wa.me/25767908378" target="_blank">+257 67 908 378</a>
                 </div>
               </div>
               

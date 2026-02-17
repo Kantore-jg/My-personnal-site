@@ -17,7 +17,7 @@
             </div>
             <div class="about-info">
               <h3>Kantore Jean Gildas</h3>
-              <p class="about-title">FullStack Developer & IT Technician</p>
+              <p class="about-title"> Developer & IT Technician</p>
               <div class="about-meta">
                 <span class="meta-item">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -39,14 +39,14 @@
           
           <div class="about-description">
             <p>
-              I'm a passionate FullStack Developer and IT Technician currently working at 
-              <strong>Advanced IT and Research Burundi</strong>. I specialize in building scalable 
+              I'm a Developer and IT Technician. <br> I specialize in building scalable 
               web applications and creating innovative digital solutions that make a real impact.
             </p>
             <p>
-              With a strong foundation in modern web technologies and a keen interest in 
+              With a strong foundation in modern web technologies and an interest in 
               artificial intelligence and data mining, I love transforming complex problems 
-              into elegant, user-friendly solutions.
+              into elegant, user-friendly solutions. <br>
+              i'm also an AI graphics designer, creating stunning visuals and animations that bring ideas to life.
             </p>
             <p>
               Let's collaborate, connect, and create something impactful together!
@@ -55,21 +55,27 @@
           
           <div class="about-highlights">
             <div class="highlight-item">
-              <div class="highlight-icon">💻</div>
+              <div class="highlight-icon">
+                <i class="pi pi-code"></i>
+              </div>
               <div class="highlight-text">
                 <h4>Web Development</h4>
                 <p>Building modern, responsive web applications</p>
               </div>
             </div>
             <div class="highlight-item">
-              <div class="highlight-icon">🤖</div>
+              <div class="highlight-icon">
+                <i class="pi pi-microchip-ai"></i>
+              </div>
               <div class="highlight-text">
                 <h4>AI & Machine Learning</h4>
                 <p>Creating intelligent solutions with Python</p>
               </div>
             </div>
             <div class="highlight-item">
-              <div class="highlight-icon">📊</div>
+              <div class="highlight-icon">
+                <i class="pi pi-chart-bar"></i>
+              </div>
               <div class="highlight-text">
                 <h4>Data Mining</h4>
                 <p>Extracting insights from complex datasets</p>
@@ -186,8 +192,19 @@ export default {
 }
 
 .highlight-icon {
-  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+}
+
+.highlight-icon .pi {
+  font-size: 1.25rem;
+  color: white;
 }
 
 .highlight-text h4 {

@@ -15,7 +15,7 @@
         >
           <div class="skill-icon">
             <div class="icon-wrapper">
-              <span class="icon-emoji">{{ skill.icon }}</span>
+              <i :class="'pi ' + skill.icon" style="font-size: 2rem; color: white;"></i>
             </div>
           </div>
           
@@ -70,37 +70,37 @@ export default {
     return {
       skills: [
         {
-          icon: '💻',
+          icon: 'pi-desktop',
           title: 'Web Development',
           description: 'Building modern, responsive web applications with cutting-edge technologies and best practices.',
           technologies: ['Vue.js', 'JavaScript', 'HTML5', 'CSS3', 'PHP', 'Laravel']
         },
         {
-          icon: '🤖',
+          icon: 'pi-microchip-ai',
           title: 'AI & Machine Learning',
           description: 'Creating intelligent solutions that can learn, adapt, and make decisions based on data patterns.',
           technologies: ['Python', 'TensorFlow', 'Scikit-learn', 'NLP', 'Data Analysis']
         },
         {
-          icon: '📊',
+          icon: 'pi-chart-bar',
           title: 'Data Mining',
           description: 'Extracting valuable insights and patterns from large datasets to drive informed decisions.',
           technologies: ['Python', 'Pandas', 'NumPy', 'Data Visualization', 'Statistics']
         },
         {
-          icon: '🗄️',
+          icon: 'pi-database',
           title: 'Database Management',
           description: 'Designing and optimizing database systems for efficient data storage and retrieval.',
           technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'SQL']
         },
         {
-          icon: '☁️',
+          icon: 'pi-cloud',
           title: 'Cloud & DevOps',
           description: 'Deploying and managing applications in cloud environments with modern DevOps practices.',
           technologies: ['Docker', 'Git', 'CI/CD', 'Linux', 'AWS Basics']
         },
         {
-          icon: '🎨',
+          icon: 'pi-palette',
           title: 'UI/UX Design',
           description: 'Creating intuitive and visually appealing user interfaces with great user experience.',
           technologies: ['Figma', 'Responsive Design', 'CSS Animations', 'User Research']
@@ -154,11 +154,6 @@ export default {
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-lg);
-}
-
-.icon-emoji {
-  font-size: 2rem;
-  filter: brightness(0) invert(1);
 }
 
 .skill-content h3 {
@@ -245,10 +240,6 @@ export default {
   .icon-wrapper {
     width: 60px;
     height: 60px;
-  }
-  
-  .icon-emoji {
-    font-size: 1.5rem;
   }
 }
 </style>

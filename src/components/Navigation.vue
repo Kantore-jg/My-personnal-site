@@ -8,7 +8,7 @@
             alt="Kantore Jean Gildas"
             class="logo-img"
           />
-          <span class="logo-text">Kantore</span>
+          <span class="logo-text">Kantox</span>
         </div>
         
         <div class="nav-menu" :class="{ 'active': isMenuOpen }">

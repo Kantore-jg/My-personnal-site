@@ -4,14 +4,14 @@
       <div class="hero-content">
         <div class="hero-text fade-in">
           <h1>Hi, I'm Kantore Jean Gildas</h1>
-          <h2>FullStack Developer & IT Technician</h2>
+          <h2>Specialized in Development & IT </h2>
           <p class="hero-description">
             Passionate about building scalable web applications and creating innovative digital solutions. 
             Specialized in modern web technologies and continuously exploring emerging frameworks.
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Get In Touch</a>
-            <a href="/resume/Kantore%20Jean%20Gildas.pdf" download="Kantore_Jean_Gildas_CV.pdf" class="btn btn-secondary">
+            <a :href="resumeUrl" download="Kantore_Jean_Gildas_CV.pdf" class="btn btn-secondary">
               Download CV
             </a>
           </div>
@@ -41,7 +41,12 @@
 
 <script>
 export default {
-  name: 'Hero'
+  name: 'Hero',
+  data() {
+    return {
+      resumeUrl: import.meta.env.BASE_URL + 'resume/Kantore%20Jean%20Gildas.pdf'
+    }
+  }
 }
 </script>
 

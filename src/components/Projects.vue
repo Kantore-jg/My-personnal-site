@@ -22,7 +22,7 @@
             <div class="project-overlay">
               <div class="project-links">
                 <a 
-                  v-if="project.liveUrl"
+                  v-if="project.liveUrl && !project.youtubeUrl"
                   :href="project.liveUrl" 
                   target="_blank"
                   class="project-link-btn"
@@ -32,6 +32,17 @@
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15,3 21,3 21,9"></polyline>
                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a 
+                  v-if="project.youtubeUrl"
+                  :href="project.youtubeUrl" 
+                  target="_blank"
+                  class="project-link-btn youtube-btn"
+                  title="Watch on YouTube"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </a>
                 <a 
@@ -137,6 +148,22 @@ export default {
             'Interactive dashboards',
             'Export functionality',
             'Real-time data updates'
+          ]
+        },
+        {
+          title: 'My Short Movie - Animation Video',
+          description: 'A creative short animated movie project showcasing storytelling through animation and video production techniques.',
+          image: 'https://img.youtube.com/vi/G4nKTFQTkXw/hqdefault.jpg',
+          liveUrl: null,
+          youtubeUrl: 'https://youtu.be/G4nKTFQTkXw',
+          githubUrl: null,
+          status: 'completed',
+          technologies: ['Animation', 'Video Production', 'Storytelling'],
+          features: [
+            'Original animated short film',
+            'Creative storytelling',
+            'Video editing & production',
+            'Published on YouTube'
           ]
         },
         {
@@ -247,6 +274,16 @@ export default {
 .project-link-btn:hover {
   background: white;
   transform: scale(1.1);
+}
+
+.youtube-btn {
+  background: rgba(255, 0, 0, 0.9);
+  color: white;
+}
+
+.youtube-btn:hover {
+  background: #ff0000;
+  color: white;
 }
 
 .project-content {

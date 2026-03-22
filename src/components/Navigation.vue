@@ -4,11 +4,11 @@
       <div class="nav-content">
         <div class="nav-logo">
           <img 
-            src="https://pbs.twimg.com/profile_images/1940855239579467777/FmAsEdzg_400x400.jpg" 
+            src="https://media.licdn.com/dms/image/v2/D5603AQFBnEiEgahS3A/profile-displayphoto-scale_200_200/B56Zr34NR_MIAY-/0/1765095312794?e=1775692800&v=beta&t=SSuhZHf8kJOlvEITlWnJB9IOG-u5kFuXVbYBin19sgQ" 
             alt="Kantore Jean Gildas"
             class="logo-img"
           />
-          <span class="logo-text">Kantox</span>
+          <span class="logo-text">Kantore</span>
         </div>
         
         <div class="nav-menu" :class="{ 'active': isMenuOpen }">

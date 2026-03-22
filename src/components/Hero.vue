@@ -20,7 +20,7 @@
         <div class="hero-image slide-in-right">
           <div class="image-container">
             <img 
-              src="https://media.licdn.com/dms/image/v2/D5603AQFBnEiEgahS3A/profile-displayphoto-crop_800_800/B56Zr34NR_MIAI-/0/1765095311237?e=1772668800&v=beta&t=Nrm2i3r2etvPsecX50xSgeLDUFCjG-6Gyhyohtk1mWs" 
+              :src="`${baseUrl}images/foto.png`"
               alt="Kantore Jean Gildas"
               class="profile-image"
             />
@@ -44,6 +44,7 @@ export default {
   name: 'Hero',
   data() {
     return {
+      baseUrl: import.meta.env.BASE_URL,
       resumeUrl: import.meta.env.BASE_URL + 'resume/Kantore%20Jean%20Gildas.pdf'
     }
   }

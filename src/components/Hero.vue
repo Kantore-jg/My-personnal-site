@@ -4,9 +4,9 @@
       <div class="hero-content">
         <div class="hero-text fade-in">
           <h1>Hi, I'm Kantore Jean Gildas</h1>
-          <h2>Specialized in Development & IT </h2>
+          <h2>A Development</h2>
           <p class="hero-description">
-            Passionate about building scalable web applications and creating innovative digital solutions. 
+            building scalable web applications and creating innovative digital solutions. 
             Specialized in modern web technologies and continuously exploring emerging frameworks.
           </p>
           <div class="hero-actions">
@@ -20,7 +20,7 @@
         <div class="hero-image slide-in-right">
           <div class="image-container">
             <img 
-              :src="`public/images/foto.png`"
+              :src="`/images/foto.png`"
               alt="Kantore Jean Gildas"
               class="profile-image"
             />

@@ -3,13 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kantore Jean Gildas - FullStack Developer & IT Technician</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Kantore Jean Gildas | IT Specialist & Full-Stack Developer</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 <body>
-  <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
+
+<nav class="nav">
+  <div class="container nav-content">
+    <div class="nav-logo">Kantore Jean Gildas</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="top-hero">
+  <!-- Clouds -->
+  <img src="images/cloud.png" alt="" class="cloud cloud-top">
+  <img src="images/cloud.png" alt="" class="cloud cloud-bottom">
+
+  <div class="hero-content" style="position:relative; z-index: 3;">
+    <img src="images/foto.png" alt="Kantore Jean Gildas" style="width:138px; height:138px; border-radius:9999px; object-fit:cover; border:5px solid white; box-shadow:0 8px 25px rgba(0,0,0,0.15); margin-bottom:1rem;">
+
+    <h1>Kantore Jean Gildas</h1>
+    <p class="subtitle">IT Specialist &amp; Full-Stack Web Developer<br>Digital Marketing &amp; Social Media Manager</p>
+
+    <div class="hero-actions">
+      <a href="about.html" class="btn btn-primary">Learn more about me</a>
+      <a href="resume/Kantore Jean Gildas.pdf" download class="btn btn-secondary">Download CV</a>
+    </div>
+
+    <p style="margin-top: 2.5rem; font-size: 0.95rem;">
+      <a href="look.html" style="color:#1e3a5f; font-weight:500;">
+        Want to see what I look like? →
+      </a>
+    </p>
+  </div>
+
+  <!-- Mountain at the bottom -->
+  <img src="images/mountain.png" alt="" class="mountain">
+</header>
+
+<main>
+  <div class="container section">
+    <div class="section-header">
+      <h2>Professional Summary</h2>
+    </div>
+    <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+      <p>Passionate and results-driven IT professional with experience in web development, digital marketing, and technology management. Skilled in developing modern websites, managing digital platforms, creating engaging content, and supporting digital transformation initiatives.</p>
+    </div>
+  </div>
+
+  <div class="container section section-alt">
+    <div class="section-header">
+      <h2>Current Focus</h2>
+    </div>
+    <div style="max-width: 860px; margin: 0 auto;">
+      <div class="card">
+        <h3>E~Menage — Digital Household Management</h3>
+        <p class="meta">Advanced IT • Bujumbura, Burundi • In Progress</p>
+        <p>Leading the development of a modern platform to digitize household registration and communication for the city of Bujumbura.</p>
+        <a href="projects.html" style="font-weight:600; display:inline-block; margin-top:0.75rem;">See project details →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div style="text-align:center; margin-bottom:1.5rem;">
+      <h2>Quick Links</h2>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;">
+      <a href="experience.html" class="btn btn-secondary">Professional Experience</a>
+      <a href="education.html" class="btn btn-secondary">Education &amp; Training</a>
+      <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+      <a href="look.html" class="btn btn-secondary">My Evolution</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Kantore Jean Gildas • Bujumbura, Burundi</p>
+    <p style="margin-top:0.4rem; font-size:0.85rem;">
+      <a href="https://github.com/Kantore-jg">GitHub</a> •
+      <a href="https://www.linkedin.com/in/kantore-jean-gildas-94b43a345/">LinkedIn</a> •
+      <a href="mailto:codewithkantox@gmail.com">Email</a>
+    </p>
+  </div>
+</footer>
+
 </body>
 </html>

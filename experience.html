@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Kantore Jean Gildas</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-content">
+    <div class="nav-logo">Kantore Jean Gildas</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html" class="active">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container section">
+  <div class="section-header">
+    <h1>Professional Experience</h1>
+    <p class="text-muted">My journey in technology and digital leadership</p>
+  </div>
+
+  <div style="max-width: 860px; margin: 0 auto;">
+
+    <!-- Experience items will be populated by data.js + script below -->
+    <div id="experience-list"></div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Kantore Jean Gildas • <a href="index.html">Back to Home</a></p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script>
+  // Render experiences from data.js
+  function renderExperiences() {
+    const container = document.getElementById('experience-list');
+    const experiences = window.PORTFOLIO_DATA.EXPERIENCES;
+
+    experiences.forEach(exp => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
+          <div>
+            <h3>${exp.role}</h3>
+            <div style="font-weight:600; color:#2c5282;">${exp.company}</div>
+          </div>
+          <div style="text-align:right; font-size:0.9rem; color:#4a5568;">
+            ${exp.period}<br>
+            <span style="font-size:0.85rem;">${exp.location}</span>
+          </div>
+        </div>
+        <p style="margin:1rem 0;">${exp.description}</p>
+        <ul style="padding-left:1.1rem; color:#4a5568; font-size:0.95rem;">
+          ${exp.highlights.map(h => `<li>${h}</li>`).join('')}
+        </ul>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', renderExperiences);
+</script>
+
+</body>
+</html>

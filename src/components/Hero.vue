@@ -20,7 +20,7 @@
         <div class="hero-image slide-in-right">
           <div class="image-container">
             <img 
-              :src="`${baseUrl}images/foto.png`"
+              :src="`public/images/foto.png`"
               alt="Kantore Jean Gildas"
               class="profile-image"
             />
@@ -56,7 +56,7 @@ export default {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #9699a5 0%, #764ba2 100%);
   position: relative;
   overflow: hidden;
 }

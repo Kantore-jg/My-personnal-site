@@ -7,12 +7,16 @@
 
 const PROFILE = {
   name: "Kantore Jean Gildas",
-  title: "IT Specialist | Full-Stack Web Developer | Digital Marketing & Social Media Manager",
+  title: "IT | Developer | Digital Marketing senior",
   location: "Bujumbura, Burundi",
   email: "codewithkantox@gmail.com",
   phone: "+257 67 908 378",
   birthdate: "June 3, 2005",
-  summary: "Passionate and results-driven IT professional with experience in web development, digital marketing, and technology management. Skilled in developing modern websites, managing digital platforms, creating engaging content, and supporting digital transformation initiatives. Strong analytical, communication, and teamwork skills with a commitment to continuous learning.",
+  summary: "Passionate and results-driven IT professional with experience in web development, digital"+
+"marketing, and technology management. Skilled in developing modern websites, managing"+
+"digital platforms, creating engaging content, and supporting digital transformation initiatives."+
+"Strong analytical, communication, and teamwork skills with a commitment to continuous"+
+"learning",
   languages: ["English", "French", "Kiswahili", "Kirundi"],
   availability: "Full Availability",
   social: {
@@ -40,9 +44,9 @@ const EXPERIENCES = [
   {
     company: "Isomero BI Technologies",
     role: "Technical Director",
-    period: "2024 – 2025",
+    period: "2026 – Present",
     location: "Bujumbura, Burundi",
-    description: "Led technical projects and software development. Coordinated development teams and supported innovation and digital transformation initiatives.",
+    description: "Transorm ideas into digital solutions by teaching and leading technical teams.",
     highlights: [
       "Team leadership",
       "Technical project management",
@@ -52,7 +56,7 @@ const EXPERIENCES = [
   {
     company: "Senior Digital Marketing (Skynet)",
     role: "Social Media Manager",
-    period: "2023 – 2024",
+    period: "2026",
     location: "Bujumbura, Burundi",
     description: "Managed company social media platforms. Created engaging digital content, maintained company websites and improved online visibility and brand awareness.",
     highlights: [
@@ -64,26 +68,7 @@ const EXPERIENCES = [
 ];
 
 const PROJECTS = [
-  {
-    title: "E~Menage - Digital Household Management",
-    status: "In Progress",
-    description: "A comprehensive system for modernizing household management and communication in Bujumbura city. Focused on digital registration, real-time communication, and data-driven urban services.",
-    technologies: ["Vue.js", "Python", "Data Analysis", "Web Development"],
-    link: "https://prezi.com/p/hf0_vh_hyma7/digitalisation-de-la-gestion-des-menages-et-de-la-communication-a-bujumbura/",
-    images: [
-      "emenage-main.png",
-      "emenage-2.png",
-      "emenage-3.png",
-      "emenage-4.png"
-    ]
-  },
-  {
-    title: "Professional Portfolio Website",
-    status: "Completed",
-    description: "Modern, professional multi-page portfolio built with clean HTML, CSS and JavaScript. Designed for clarity and professionalism.",
-    technologies: ["HTML5", "CSS3", "JavaScript"],
-    link: null
-  }
+  
 ];
 
 const EDUCATION = [

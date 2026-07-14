@@ -98,10 +98,133 @@ a:hover {
   border-bottom: 2px solid var(--primary);
 }
 
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
 @media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.55rem; }
+  h3 { font-size: 1.15rem; }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .nav-content {
+    height: 60px;
+  }
+
+  /* Mobile Navigation */
   .nav-links {
-    gap: 1rem;
-    font-size: 0.95rem;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    gap: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--primary);
+    padding: 0.25rem 0.5rem;
+    line-height: 1;
+  }
+}
+
+.nav-toggle {
+  display: none;
+}
+
+  /* Hero */
+  .top-hero {
+    padding: 70px 0 10px;
+    min-height: 380px;
+  }
+
+  .top-hero .cloud {
+    display: none; /* simplify on mobile */
+  }
+
+  .top-hero .mountain {
+    max-width: 100%;
+    bottom: -5px;
+  }
+
+  .hero-content img {
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+  /* Grids & layouts */
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  /* Look page */
+  .look-entry {
+    flex-direction: column;
+  }
+
+  .look-entry .year {
+    width: auto;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .look-entry img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* General */
+  .card {
+    padding: 1.25rem;
+  }
+
+  .section {
+    padding: 2.25rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -295,6 +418,12 @@ a:hover {
   max-width: 780px;
   margin: 0 auto;
   padding: 2rem 1rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
 }
 
 .look-header {

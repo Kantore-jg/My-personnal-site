@@ -4,12 +4,16 @@
 
 export const PROFILE = {
   name: "Kantore Jean Gildas",
-  title: "IT Specialist | Full-Stack Web Developer | Digital Marketing & Social Media Manager",
+  title: "IT & Developer, Digital Marketing senior",
   location: "Bujumbura, Burundi",
   email: "codewithkantox@gmail.com",
   phone: "+257 67 908 378",
   birthdate: "June 3, 2005",
-  summary: "Passionate and results-driven IT professional with experience in web development, digital marketing, and technology management. Skilled in developing modern websites, managing digital platforms, creating engaging content, and supporting digital transformation initiatives.",
+  summary: "Passionate and results-driven IT professional with experience in web development, digital"+
+"marketing, and technology management. Skilled in developing modern websites, managing"+
+"digital platforms, creating engaging content, and supporting digital transformation initiatives."+
+"Strong analytical, communication, and teamwork skills with a commitment to continuous"+
+"learning.",
   languages: ["English", "French", "Kiswahili", "Kirundi"],
   social: {
     linkedin: "https://www.linkedin.com/in/kantore-jean-gildas-94b43a345/",
@@ -56,7 +60,7 @@ export const PROJECTS = [
     title: "Ikinyamakuru Project",
     status: "In Progress",
     description: "A new digital project focused on news and information management.",
-    technologies: ["Web Development", "Data Management"]
+    technologies: ["Web Development"]
   },
   {
     title: "E~Menage - Digital Household Management",

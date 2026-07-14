@@ -59,9 +59,9 @@ export default {
           caption: 'Present. Working as Web Developer and leading digital transformation projects.'
         },
         {
-          year: '',
+          year: 'Where I call home. ',
           image: '/look/where_i_call_home1.png',
-          caption: 'Where I call home. Bujumbura and the beautiful landscapes that inspire me every day.'
+          caption: 'Karusi and the beautiful landscapes that inspire me every day.'
         }
       ]
     }

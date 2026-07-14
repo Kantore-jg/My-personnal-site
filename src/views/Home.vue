@@ -11,10 +11,9 @@
       >
 
       <h1>Kantore Jean Gildas</h1>
-      <p class="subtitle">
-        IT Specialist &amp; Full-Stack Web Developer<br>
-        Digital Marketing &amp; Social Media Manager
-      </p>
+      <h2 class="subtitle" style="color: rgb(14, 3, 3); font-size: 1.25rem; font-weight: 500;">
+        IT &amp; Developer,<br>Digital Marketing senior
+      </h2>
 
       <div class="hero-actions">
         <router-link to="/about" class="btn btn-primary">Learn more about me</router-link>
@@ -22,7 +21,7 @@
       </div>
 
       <p style="margin-top: 2.5rem; font-size: 0.95rem;">
-        <router-link to="/look" style="color:#1e3a5f; font-weight:500;">
+        <router-link to="/look" style="color:#0a0e14; font-weight:500;">
           Want to see what I look like? →
         </router-link>
       </p>

@@ -15,13 +15,11 @@
       </div>
 
       <p style="font-size:1.1rem; line-height:1.75;">
-        I am an IT Specialist, Full-Stack Web Developer, and Digital Marketing &amp; Social Media Manager based in Bujumbura, Burundi.
+        I am an IT,Developer, and Digital Marketing Senior
       </p>
 
-      <p>{{ profile.summary }}</p>
-
       <p>
-        I am passionate about using technology to solve real problems — whether that means developing systems for digital transformation, creating impactful digital content, or leading technical teams.
+        I am passionate about using technology to solve real problems 
       </p>
 
       <hr>
@@ -50,7 +48,7 @@ export default {
   data() {
     return {
       profile: PROFILE,
-      coreStrengths: ['Web Development', 'Digital Marketing', 'Social Media Management', 'Team Leadership', 'Python & Data', 'Project Coordination']
+      coreStrengths: ['Web Development', 'Digital Marketing', 'Social Media Management', 'Python & Data Analysis']
     }
   }
 }

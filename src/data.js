@@ -40,15 +40,15 @@ export const EXPERIENCES = [
   {
     company: "Isomero BI Technologies",
     role: "Technical Director",
-    period: "2024 – 2025",
+    period: "2026 – Present",
     location: "Bujumbura, Burundi",
     description: "Led technical projects and software development. Coordinated development teams and supported innovation and digital transformation.",
     highlights: ["Team leadership", "Technical project management", "Digital transformation support"]
   },
   {
     company: "Senior Digital Marketing (Skynet)",
-    role: "Social Media Manager",
-    period: "2023 – 2024",
+    // role: "2025-2026",
+    period: "2025 – 2026",
     location: "Bujumbura, Burundi",
     description: "Managed company social media platforms. Created engaging digital content and improved online visibility.",
     highlights: ["Social media strategy", "Content creation", "Brand visibility growth"]
@@ -86,8 +86,7 @@ export const EDUCATION = [
 ]
 
 export const CERTIFICATIONS = [
-  { name: "100 Days of Code – Python", issuer: "Udemy", year: "2025" },
-  { name: "JuneTech Participation Certificate", issuer: "JuneTech", year: "2025" }
+  // { name: "100 Days of Code – Python", issuer: "Udemy", year: "2025" },
 ]
 
 export const SKILLS = [

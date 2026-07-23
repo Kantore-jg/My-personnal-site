@@ -27,10 +27,10 @@
 
     <footer class="footer">
       <div class="container">
-        <p>© 2025 Kantore Jean Gildas • Bujumbura, Burundi</p>
+        <p>© {{ currentYear }} Kantore Jean Gildas • Bujumbura, Burundi</p>
         <p style="margin-top: 0.3rem; font-size: 0.85rem;">
-          <a href="https://github.com/Kantore-jg" target="_blank">GitHub</a> • 
-          <a href="https://www.linkedin.com/in/kantore-jean-gildas-94b43a345/" target="_blank">LinkedIn</a> • 
+          <a href="https://github.com/Kantore-jg" target="_blank" rel="noopener noreferrer">GitHub</a> • 
+          <a href="https://www.linkedin.com/in/kantore-jean-gildas-94b43a345/" target="_blank" rel="noopener noreferrer">LinkedIn</a> • 
           <a :href="'mailto:' + profile.email">{{ profile.email }}</a>
         </p>
       </div>
@@ -46,7 +46,8 @@ export default {
   data() {
     return {
       isMenuOpen: false,
-      profile: PROFILE
+      profile: PROFILE,
+      currentYear: new Date().getFullYear()
     }
   },
   methods: {

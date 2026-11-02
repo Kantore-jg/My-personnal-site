@@ -334,12 +334,9 @@ a:hover { text-decoration: underline; }
   color: #276749;
 }
 
-.message-item {
-  background: var(--bg-alt);
-  padding: 0.8rem;
-  border-radius: 6px;
-  margin-bottom: 0.6rem;
-  font-size: 0.9rem;
+.form-status.error {
+  background: #fff5f5;
+  color: #c53030;
 }
 
 /* Contact grid */

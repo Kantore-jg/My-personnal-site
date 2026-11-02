@@ -93,29 +93,3 @@ export const SKILLS = [
   "HTML5", "CSS3", "JavaScript", "PHP", "Laravel", "MySQL", "Python", "Git/GitHub",
   "Web Development", "Digital Marketing", "Content Creation", "Social Media Management"
 ]
-
-// Contact message storage (persists in localStorage)
-export function saveMessage(messageData) {
-  const messages = getMessages()
-  const newMessage = {
-    id: Date.now(),
-    ...messageData,
-    timestamp: new Date().toISOString()
-  }
-  messages.push(newMessage)
-  localStorage.setItem('kantore_messages', JSON.stringify(messages))
-  return newMessage
-}
-
-export function getMessages() {
-  try {
-    const data = localStorage.getItem('kantore_messages')
-    return data ? JSON.parse(data) : []
-  } catch {
-    return []
-  }
-}
-
-export function clearMessages() {
-  localStorage.removeItem('kantore_messages')
-}

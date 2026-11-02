@@ -44,19 +44,19 @@
         <form @submit.prevent="handleSubmit">
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" v-model="form.name" required>
+            <input type="text" id="name" v-model="form.name" name="name" required autocomplete="name">
           </div>
           <div class="form-group">
             <label for="email">Your Email</label>
-            <input type="email" id="email" v-model="form.email" required>
+            <input type="email" id="email" v-model="form.email" name="email" required autocomplete="email">
           </div>
           <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" v-model="form.subject" required>
+            <input type="text" id="subject" v-model="form.subject" name="subject" required>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" v-model="form.message" required></textarea>
+            <textarea id="message" v-model="form.message" name="message" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;" :disabled="isSubmitting">
             {{ isSubmitting ? 'Sending...' : 'Send Message' }}
@@ -66,27 +66,15 @@
         <div v-if="formStatus" class="form-status" :class="formStatus.type">
           {{ formStatus.message }}
         </div>
-
-        <!-- Saved messages -->
-        <div class="saved-messages" style="margin-top:2rem;">
-          <h3 style="font-size:1.1rem;">Messages Received (local)</h3>
-          <div v-if="savedMessages.length === 0" class="text-muted" style="font-size:0.9rem;">No messages saved yet.</div>
-          <div v-for="msg in savedMessages" :key="msg.id" class="message-item">
-            <div class="meta">{{ new Date(msg.timestamp).toLocaleString() }} — {{ msg.name }}</div>
-            <strong>{{ msg.subject }}</strong><br>
-            <span>{{ msg.message }}</span>
-          </div>
-          <button v-if="savedMessages.length" @click="clearSaved" class="btn btn-secondary" style="font-size:0.8rem; padding:0.35rem 0.9rem; margin-top:0.5rem;">
-            Clear saved messages
-          </button>
-        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { PROFILE, saveMessage, getMessages, clearMessages } from '../data.js'
+import { PROFILE } from '../data.js'
+
+const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID
 
 export default {
   name: 'Contact',
@@ -100,37 +88,63 @@ export default {
         message: ''
       },
       isSubmitting: false,
-      formStatus: null,
-      savedMessages: []
+      formStatus: null
     }
   },
   methods: {
-    handleSubmit() {
+    async handleSubmit() {
       if (!this.form.name || !this.form.email || !this.form.subject || !this.form.message) {
         this.formStatus = { type: 'error', message: 'Please fill out all fields.' }
         return
       }
 
-      this.isSubmitting = true
+      if (!FORMSPREE_ID) {
+        this.formStatus = {
+          type: 'error',
+          message: 'Contact form is not configured yet. Please email me directly.'
+        }
+        return
+      }
 
-      // Simulate + save
-      setTimeout(() => {
-        saveMessage({ ...this.form })
-        this.formStatus = { type: 'success', message: 'Thank you! Your message has been recorded locally.' }
-        this.form = { name: '', email: '', subject: '', message: '' }
-        this.savedMessages = getMessages()
+      this.isSubmitting = true
+      this.formStatus = null
+
+      try {
+        const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({
+            name: this.form.name,
+            email: this.form.email,
+            _subject: this.form.subject,
+            message: this.form.message
+          })
+        })
+
+        if (response.ok) {
+          this.formStatus = {
+            type: 'success',
+            message: 'Thank you for reaching out!'
+          }
+          this.form = { name: '', email: '', subject: '', message: '' }
+        } else {
+          const data = await response.json().catch(() => null)
+          const errorMessage = data?.errors?.[0]?.message
+            || 'Something went wrong. Please try again or email me directly.'
+          this.formStatus = { type: 'error', message: errorMessage }
+        }
+      } catch {
+        this.formStatus = {
+          type: 'error',
+          message: 'Network error. Please check your connection and try again.'
+        }
+      } finally {
         this.isSubmitting = false
-      }, 600)
-    },
-    clearSaved() {
-      if (confirm('Clear all locally saved messages?')) {
-        clearMessages()
-        this.savedMessages = []
       }
     }
-  },
-  mounted() {
-    this.savedMessages = getMessages()
   }
 }
 </script>
